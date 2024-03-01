@@ -1,13 +1,12 @@
-//Prevents the header file from being included multiple times in the same file
+// Prevents the header file from being included multiple times in the same file
 #ifndef __DM510_MSGBOX_H__
-//We define a macro to indicate the header file has been included. 
+// Define a macro to indicate the header file has been included.
 #define __DM510_MSGBOX_H__
 
-//We declare a system call for sending a message to message box.
+// Declare a system call for sending a message to message box.
 asmlinkage long sys_dm510_msgbox_put(const char __user *buffer, int length);
-//We declare a system call for retriveing a message from a message box
+// Declare a system call for retrieving a message from a message box
 asmlinkage long sys_dm510_msgbox_get(char __user *buffer, int length);
 
-//Then we end the conditional inclusion to ensure the content is only included once.
+// Then we end the conditional inclusion to ensure the content is only included once.
 #endif // __DM510_MSGBOX_H__
-
